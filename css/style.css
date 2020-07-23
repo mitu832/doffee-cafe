@@ -1,0 +1,977 @@
+@charset "UTF-8";
+/* 全ページ共通 */
+@font-face {
+    font-family: "cinecaption";
+    src: url(../fonts2/cinecaption.woff) format("woff");
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "cinecaption";
+}
+#wrapper, #menuwrapper, #informationwrapper, #accesswrapper, #contactwrapper {
+    width: 100%;
+    background-color: bisque;
+}
+/* ナビゲーション */
+nav{
+    text-align: center;
+}
+#navi button {
+    display: none;
+    -webkit-appearance: none;
+    border: none;
+}
+#navi button img{
+    width: 50px;
+    height: 50px;
+}
+#navi {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    font-family: fantasy;
+    background-color: #000;
+    position: fixed;
+    top: 0px;
+    z-index: 5;
+}
+#navi ul {
+    margin-left: 25%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#navi ul li {
+    margin-right: 80px;
+    font-size: 22px;
+}
+#navi ul li a {
+    color: #f4a460;
+    text-decoration: none;
+}
+#navi ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.breadcrumb {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.breadcrumb:hover {
+    cursor: default;
+}
+/* ナビゲーション */
+#conceptBackground {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/donuts_top.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+h1 {
+    margin-left: 80px;
+}
+h2 {
+    width: 80%;
+    margin: 50px auto;
+    color: #f4a460;
+    font-size: 35px;
+    padding-left: 20px;
+    border-left: 5px solid #000;
+}
+.icon {
+    position: fixed;
+    bottom: 30px;
+    right: 80px;
+}
+.twitter {
+    margin-right: 30px;
+}
+.copy {
+    position: relative;
+    z-index: 2;
+    display: block;
+    text-align: center;
+}
+/* 全ページ共通 */
+/* ローディングページ */
+#loading {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    z-index: 100;
+}
+#loading p {
+    color: #f4a460;
+    text-align: center;
+    -webkit-animation: loadinganimation 1500ms ease-out forwards infinite;
+    animation: loadinganimation 1500ms ease-out forwards infinite;
+}
+.loading_img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: loadinganimation 1500ms ease-out forwards infinite;
+    animation: loadinganimation 1500ms ease-out forwards infinite;
+}
+@keyframes loadinganimation {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 5;
+    }
+}
+/* ローディングページ */
+/* index.html */
+.concept_title {
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25%;
+    border: none;
+}
+.click {
+    margin-top: 50px;
+    text-align: center;
+}
+.click a {
+    color: #000;
+    font-size: 25px;
+    font-weight: 900;
+}
+.click a:hover {
+    color: #f4a460;
+    transition: 0.65s;
+}
+.response {
+    display: none;
+}
+#concept {
+    text-align: center;
+    margin: 100px auto;
+}
+#concept .doffee {
+    font-size: 25px;
+    margin: 100px auto 200px auto;
+}
+#concept strong {
+    font-size: 30px;
+}
+/*マグカップスライドショー*/
+.mag {
+    width: 75%;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    top: -100px;
+}
+.mag > img {
+    width: 70%;
+    position: absolute;
+    left: 10%;
+    right: 0;
+    margin: 0 auto;
+}
+.slider {
+    width: 52%;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+.slider img {
+    width: 100%;
+}
+.slider img:hover {
+    opacity: 0.8;
+}
+/*マグカップスライドショー*/
+#concept2 p {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 25px;
+}
+#genzairyou {
+    width: 75%;
+    margin: 0 auto;
+}
+#genzairyou > h2 {
+    margin-top: 100px;
+}
+#genzairyou dl {
+    display: flex;
+    justify-content: space-between;
+}
+.zairyou1, .zairyou2 {
+    position: relative;
+}
+.zairyou1 img, .zairyou2 img {
+    border-radius: 50%;
+}
+.opacity {
+    width: 60%;
+    height: 100px;
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    background-color: #fff;
+    opacity: 0.6;
+}
+.zairyou1 dt, .zairyou2 dt {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.zairyou1 dd, .zairyou2 dd {
+    font-size: 15px;
+    text-align: left;
+}
+#salestime {
+    width: 75%;
+    margin: 120px auto;
+}
+#salestime dt {
+    float: left;
+}
+#salestime dd {
+    margin-left: 5em;
+}
+#accessflexbox {
+    display: flex;
+    justify-content: space-around;
+}
+#accessflexbox img {
+    border-radius: 50%;
+}
+
+/* index.html */
+/* menu.html */
+/*コーヒー3種類*/
+.drink {
+    width: 70%;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+.drink h2 {
+    margin-top: 125px;
+}
+.drink p {
+    text-align: center;
+    font-size: 22px;
+}
+.coffeeType {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    font-size: 30px;
+}
+.coffeeType img {
+    border-radius: 50%;
+}
+.coffeeType mark {
+    font-size: 35px;
+    margin-left: -50px;
+    marker: yellow;
+}
+.coffeeType dt {
+    line-height: 45px;
+}
+.coffeeType dd {
+    text-align: right;
+    margin: 20px 0;
+}
+/*コーヒー3種類*/
+/*コーヒーパック売り*/
+.coffeeBean {
+    width: 70%;
+    margin: 0 auto;
+}
+.coffeeBean p {
+    text-align: center;
+    font-size: 25px;
+}
+.coffeepack {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.coffeepack figcaption {
+    text-align: center;
+    font-size: 20px;
+}
+/*コーヒーパック売り*/
+/*ドーナツメニュー*/
+.donutsmenu > h2 {
+    width: 56%;
+    margin: 50px auto;
+}
+.donutsmenu .background:first-of-type {
+    background-image: url(../images/coffeebeanlow.jpg);
+}
+.donutsmenu .background:nth-of-type(2) {
+    background-image: url(../images/coffeebean.jpg);
+}
+.donutsmenu .background:last-of-type {
+    background-image: url(../images/coffeebeanhigh.jpg);
+}
+.background {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 130px;
+}
+.background h3 {
+    margin: 0;
+    padding: 30px 0 30px 0;
+    font-size: 35px;
+    text-align: center;
+    color: #fff;
+}
+.box {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+}
+.donuts p {
+    text-align: center;
+}
+/*ドーナツメニュー*/
+footer {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+}
+/* menu.html */
+/* information.html */
+.news_contents {
+    width: 70%;
+    margin: 75px auto 0 auto;
+    padding-top: 50px;
+}
+.news_flame {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-left: 5px double #f4a460;
+    border-right: 5px double #f4a460;
+}
+.infodescription p, .infodescription dl {
+    font-size: 20px;
+}
+.infodescription h3 {
+    font-size: 30px;
+}
+.infodescription dt {
+    float: left;
+    width: 100px;
+    letter-spacing: 10px;
+    margin: 5px auto;
+}
+.infodescription dd {
+    float: left;
+    width: 280px;
+    margin-left: 7em;
+    margin-top: -27px;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.news_flame img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+.news figure {
+    display: flex;
+    text-align: center;
+}
+.news figure img {
+    border-radius: 10px;
+}
+.news figcaption {
+    width: 50%;
+    font-size: 22px;
+    line-height: 33px;
+    margin-left: 50px;
+}
+figcaption img {
+    margin-right: 10px;
+}
+.news figcaption a {
+    color: #ffff00;
+    font-family: fantasy;
+    text-decoration: none;
+}
+.news {
+    font-size: 23px;
+    margin-bottom: 50px;
+    padding: 20px 10px;
+    background-color: #b8860b;
+    border-radius: 10px;
+    z-index: 0;
+    overflow: hidden;
+}
+#info h3 {
+    margin-left: 40px;
+    font-size: 30px;
+}
+/* ↑↑information.html↑↑ */
+/* ↓↓access.html↓↓ */
+.access_top {
+    width: 70%;
+    margin: 75px auto 0 auto;
+    padding-top: 50px;
+}
+.address {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+    padding: 20px 10px;
+    border-left: 5px double #f4a460;
+    border-right: 5px double #f4a460;
+}
+.address span {
+    font-size: 30px;
+}
+iframe {
+    filter: grayscale(60%);
+    width: 80%;
+}
+/* ↑↑access.html↑↑ */
+/* ↓↓contact.html↓↓ */
+.contact_contents {
+    width: 80%;
+    margin: 75px auto 0 auto;
+    padding-top: 50px;
+}
+form {
+    padding: 0 40px;
+    border-left: 5px double #f4a460;
+    border-right: 5px double #f4a460;
+}
+input[type="text"], input[type="tel"] {
+    width: 200px;
+    border-radius: 20px;
+}
+input[type="email"] {
+    width: 400px;
+    border-radius: 20px;
+}
+select {
+    width: 150px;
+    height: 20px;
+}
+textarea {
+    border-radius: 10px;
+    width: 500px;
+    height: 150px;
+    overflow-y: scroll;
+}
+input[type="submit"] {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #000;
+    color: yellow;
+}
+/* ↑↑contact.html↑↑ */
+@media screen and (max-width: 1300px) {
+    /*index.html*/
+    #navi h1 img {
+        width: 200px;
+        height: auto;
+    }
+    #navi ul {
+        margin: 4% 30%;
+        width: 40%;
+    }
+    #concept {
+        margin-bottom: 0;
+    }
+    #concept2 {
+        margin-top: -8%;
+    }
+    .zairyou1 img, .zairyou2 img {
+        width: 85%;
+        height: auto;
+    }
+    .opacity dt, .opacity dd {
+        font-size: 90%;
+    }
+    /*index.html*/
+    /*menu.html*/
+    .background {
+        top: 0px;
+    }
+    /*    information.html*/
+    .news_flame img {
+        height: auto;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /*index.html*/
+    #loading {
+        margin-top: -100px;
+    }
+    #conceptBackground {
+        margin-top: 100px;
+    }
+    #navi h1 {
+        margin: 0;
+        text-align: center;
+    }
+    #navi {
+        background-color: #000;
+        display: block;
+        padding: 8px 0;
+    }
+    nav {
+        margin: 0;
+        padding: 1px 0;
+        width: 100%;
+        background-color: #000;
+    }
+    nav ul li {
+        margin-left: 5%;
+    }
+    nav ul li:last-child {
+        margin-right: 5%;
+    }
+    /*index.html*/
+    /*menu.html*/
+    .coffeeType mark {
+        margin-left: -5px;
+        font-size: 28px;
+        text-align: center;
+    }
+    .coffeeType {
+        display: block;
+        text-align: center;
+    }
+    .coffeeType img {
+        width: 70%;
+        height: auto;
+    }
+    .coffeeType dd {
+        text-align: center;
+    }
+    .coffeeType figcaption {
+        font-size: 20px;
+    }
+    .drink {
+        margin-top: 100px;
+    }
+    .coffeepack img {
+        width: 250px;
+    }
+    .background {
+        top: 0px;
+    }
+    /*menu.html*/
+    /*information.html*/
+    #info h3 {
+        margin: 100px auto 0 auto;
+    }
+    .news_contents {
+        margin-top: 200px;
+    }
+    .news_contents h2 {
+        width: 80%;
+        margin-top: 25px;
+    }
+    .news_contents dt, .news_contents dd {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .news_flame {
+        display: inline-block;
+        text-align: center;
+    }
+    .news_flame img {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+    .news {
+        width: 100%;
+        margin: 50px auto;
+        text-align: center;
+    }
+    .news figure {
+        display: inline-block;
+    }
+    .news figure figcaption {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .infodescription dl dd {
+        margin: 0 auto 30px auto;
+    }
+    /*information.html*/
+    /*access.html*/
+    .access_top h2 {
+        margin-top: 150px;
+    }
+    /*access.html*/
+    /*contact.html*/
+    .contact_contents h2 {
+        margin-top: 150px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    /*index.html*/
+    .concept_title {
+        font-size: 30px;
+    }
+    .accessimg > img {
+        width: 85%;
+        height: auto;
+    }
+    .accessdescription {
+        font-size: 15px;
+    }
+    #concept strong {
+        font-size: 25px;
+    }
+    #concept .doffee, #concept2 p {
+        font-size: 20px;
+    }
+    /*index.html*/
+}
+@media screen and (max-width: 1000px) {
+    /*index.html*/
+    #concept2 {
+        margin-top: -200px;
+    }
+    /*index.html*/
+}
+@media screen and (max-width: 900px) {
+    /*index.html*/
+    #loading {
+        margin-top: -250px;
+    }
+    #conceptBackground {
+        margin-top: 250px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    h2 {
+        text-align: center;
+        border: none;
+        padding-left: 0;
+    }
+    #navi h1 img {
+        width: 150px;
+        margin: 0;
+    }
+    #navi ul {
+        display: inline-block;
+        text-align: center;
+    }
+    #navi ul li {
+        font-size: 18px;
+        letter-spacing: 5px;
+    }
+    .breadcrumb {
+        color: #fff;
+        border: none;
+    }
+    #banner {
+        margin-top: 30%;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    .click {
+        display: none;
+    }
+    #genzairyou dl {
+        flex-direction: column;
+    }
+    #genzairyou img {
+        height: auto;
+    }
+    .zairyou1 {
+        margin-bottom: 80px;
+        text-align: center;
+    }
+    .zairyou2 {
+        text-align: center;
+    }
+    #accessflexbox {
+        display: inline-block;
+    }
+    #accessflexbox img{
+        width: 70%;
+        height: auto;
+    }
+    #salestime{
+        text-align: center;
+    }
+    #salestime dl {
+        display: inline-block;
+    }
+    .accessdescription dd:first-of-type {
+        margin-top: -4px;
+    }
+    /*index.html*/
+    /*menu.html*/
+    .drink {
+        margin-top: 150px;
+    }
+    .drink p, .beansentence p {
+        font-size: 20px;
+    }
+    .coffeepack img {
+        width: 170px;
+    }
+    /*menu.html*/
+    /*information.html*/
+    .news_contents {
+        padding-top: 100px;
+    }
+    .news figure img {
+        width: 100%;
+    }
+    .news figure figcaption {
+        font-size: 18px;
+    }
+    /*information.html*/
+    /*access.html*/
+    .access_top h2 {
+        padding-left: 0;
+        margin-top: 200px;
+    }
+    /*access.html*/
+    /*contact.html*/
+    .contact_contents h2 {
+        margin-top: 200px;
+    }
+    input[type="text"], input[type="tel"] {
+        margin-top: 20px;
+        width: 70%;
+    }
+    /*
+    form {
+        text-align: center;
+    }
+*/
+    select {
+        margin: 20px 0;
+    }
+    textarea, input[type="email"] {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    /*index.html*/
+    #concept2 {
+        margin-top: -300px;
+    }
+    .response {
+        display: block;
+    }
+    /*index.html*/
+    /*menu.html */
+    .background {
+        height: 120vh;
+        top: -300px;
+    }
+    .coffeepack figcaption {
+        font-size: 18px;
+    }
+    .coffeepack img {
+        width: 150px;
+    }
+    /*menu.html*/
+    /*information.html*/
+    .news {
+        width: 90%;
+    }
+    /*information.html*/
+}
+@media screen and (max-width: 640px) {
+    /*index.html*/
+    #loading {
+        height: 120vh;
+        margin-top: -250px;
+    }
+    .loading_img {
+        text-align: center;
+    }
+    .loading_img img {
+        width: 50%;
+        height: auto;
+    }
+    .loading_img p {
+        font-size: 15px;
+        text-align: center;
+    }
+    #banner {
+        margin-top: 250px;
+        position: relative;
+    }
+    .concept_title {
+        font-size: 22px;
+        position: absolute;
+        marign: 0 auto;
+        top: 40%;
+        left: 0;
+        right: 0;
+    }
+    #concept2 {
+        margin-top: -400px;
+    }
+    /*index.html*/
+    /*menu.html*/
+    .background {
+        height: 220vh;
+        top: -700px;
+    }
+    .donuts {
+        margin: 0 auto;
+    }
+    .donuts img {
+        display: block;
+    }
+    .coffeepack {
+        display: block;
+    }
+    .coffeepack figure {
+        text-align: center;
+    }
+    .coffeepack figcaption {
+        font-size: 15px;
+    }
+    /*menu.html*/
+    /*information.html*/
+    /*access.html*/
+    .access_top {
+        width: 90%;
+    }
+    .address {
+        border: none;
+        padding: 0;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+    }
+    /*access.html*/
+}
+@media screen and (max-width: 470px) {
+    /*index.html*/
+    #navi button {
+        display: inline-block;
+    }
+
+    #navi .menu {
+        padding-left: 0;
+        display: none;
+    }
+    #conceptBackground {
+        margin-top: 100px;
+    }
+    .concept_title {
+        margin-top: -5%;
+        font-size: 17px;
+    }
+    
+    #genzairyou > h2, #salestime h2 {
+        font-size: 25px;
+    }
+    #concept {
+        margin-top: -330px;
+    }
+    #concept strong, #concept .doffee{
+        font-size: 15px;
+    }
+    #concept2 p{
+        font-size: 12px;
+    }
+    .opacity {
+        height: 80%;
+    }
+    .accessdescription h3{
+        text-align: center;
+    }
+    .icon {
+        position: static;
+        margin-bottom: 50px;
+    }
+    /*index.html*/
+    /*menu.html*/
+    .drink h2{
+        margin-top: 0;
+    }
+    .background {
+        height: 230vh;
+        top: -700px;
+    }
+    .coffeeType dt {
+        font-size: 22px;
+    }
+    .coffeeType dd {
+        margin-top: 0px;
+        font-size: 20px;
+    }
+    .coffeepack figure{
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*menu.html*/
+    /*information.html*/
+    #informationwrapper{
+        padding-top: 5px;
+        margin-top: -2px;
+    }
+    .news_contents {
+        padding-top: 0;
+    }
+    #info h3 {
+        text-align: center;
+    }
+    .infodescription > h3 {
+        font-size: 29px;
+    }
+    .infodescription dl dd {
+        font-size: 16px;
+    }
+    .news figcaption h4 {
+        font-size: 20px;
+    }
+    .news figcaption p {
+        font-size: 14px;
+    }
+    
+    /*access.html*/
+    .access_top h2{
+       margin-top: 70px; 
+    }
+    
+    /*contact.html*/
+    .contact_contents h2{
+        margin-top: 70px;
+    }
+}
